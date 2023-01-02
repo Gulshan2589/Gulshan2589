@@ -58,7 +58,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://snazzy-bunny-8416c0.netlify.app",
   "devDependencies": {
     "@expo/webpack-config": "^0.17.3",
     "cors": "^2.8.5",
