@@ -25,7 +25,7 @@ function Navbar() {
                             <NavLink to="/"><img src="assets/img/log1.png" alt="" className="img-fluid" /></NavLink>
                         </div>
     
-                        <nav id="navbar" className="navbar order-last ms-auto order-lg-0">
+                        <nav id="navbar" className="navbar navbar-expand-lg order-last ms-auto order-lg-0">
                             <ul>
                                 <li><NavLink className="nav-link scrollto active" to="/">Home</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/dashboard">Dashboard</NavLink></li>
@@ -33,7 +33,10 @@ function Navbar() {
                                 <li><NavLink className="nav-link scrollto" to="/face">Face</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/about">About</NavLink></li>
                             </ul>
-                            <i className="bi bi-list mobile-nav-toggle"></i>
+                            //<i className="bi bi-list mobile-nav-toggle"></i>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon"></span>
+                            </button>
                         </nav>
                         <div className="toggle" onClick={handleClick}>
                             <Moon style={{
