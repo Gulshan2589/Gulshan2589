@@ -56,22 +56,21 @@ function Face() {
 
                 const resizedDetections = faceapi.resizeResults(detections, displaySize);
 
-               // localStorage.setItem('faceMatcher', JSON.stringify(detections));
+              localStorage.setItem('faceMatcher', JSON.stringify(detections));
 
                 canvasRef && canvasRef.current && canvasRef.current.getContext('2d').clearRect(0, 0, videoWidth, videoHeight);
                 canvasRef && canvasRef.current && faceapi.draw.drawDetections(canvasRef.current, resizedDetections);
                 canvasRef && canvasRef.current && faceapi.draw.drawFaceLandmarks(canvasRef.current, resizedDetections);
                 canvasRef && canvasRef.current && faceapi.draw.drawFaceExpressions(canvasRef.current, resizedDetections);
 
-                await axios.post('/api/face/faceregister', detections);
+                await axios.post('/api/face/faceregister', JSON.stringify(detections));
+                const matchdata = JSON.parse(localStorage.getItem('faceMatcher'));
                 
-            //     const data = JSON.parse(localStorage.getItem('faceMatcher'));
-            //    // console.log(data);
-            //     if (data===detections) {
-            //         console.log("first");
-            //     } else {
-            //         console.log("second");
-            //     }
+                if (JSON.stringify(matchdata) === JSON.stringify(detections)) {
+                    console.log("first");
+                } else {
+                    console.log("second");
+                }
             }
         }, 1000)
     }

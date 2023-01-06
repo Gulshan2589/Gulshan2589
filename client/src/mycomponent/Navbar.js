@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import Sun from '@iconscout/react-unicons/icons/uil-sun';
 import Moon from '@iconscout/react-unicons/icons/uil-moon';
 import { themeContext } from '../../src/Context';
 import { useContext } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 // import Toggle from "../mycomponent/Toggle";
 
 
 function Navbar() {
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
+    const [showMediaIcons, setShowMediaIcons] = useState(false);
     const navigate = useNavigate();
     const handleClick = () => {
         theme.dispatch({ type: "toggle" })
     }
     const location = useLocation().pathname;
-    if (location !== "/login" && location !== "/register" ) {
+    if (location !== "/login" && location !== "/register") {
         return (
             <>
                 <header id="header" className="fixed-top d-flex align-items-center">
@@ -24,7 +26,6 @@ function Navbar() {
                             {/* <h1><NavLink to="/">Hisab Book</NavLink></h1> */}
                             <NavLink to="/"><img src="assets/img/log1.png" alt="" className="img-fluid" /></NavLink>
                         </div>
-    
                         <nav id="navbar" className="navbar order-last ms-auto order-lg-0">
                             <ul>
                                 <li><NavLink className="nav-link scrollto active" to="/">Home</NavLink></li>
@@ -58,6 +59,6 @@ function Navbar() {
             </>
         );
     }
-    
+
 }
 export default Navbar;
