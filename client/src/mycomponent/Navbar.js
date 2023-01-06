@@ -4,7 +4,6 @@ import Sun from '@iconscout/react-unicons/icons/uil-sun';
 import Moon from '@iconscout/react-unicons/icons/uil-moon';
 import { themeContext } from '../../src/Context';
 import { useContext } from 'react';
-import { GiHamburgerMenu } from "react-icons/gi";
 // import Toggle from "../mycomponent/Toggle";
 
 
@@ -26,7 +25,7 @@ function Navbar() {
                             {/* <h1><NavLink to="/">Hisab Book</NavLink></h1> */}
                             <NavLink to="/"><img src="assets/img/log1.png" alt="" className="img-fluid" /></NavLink>
                         </div>
-                        <nav id="navbar" className="navbar order-last ms-auto order-lg-0">
+                        <nav id="navbar" className={showMediaIcons ?"navbar navbar-mobile":"navbar order-last ms-auto order-lg-0"}>
                             <ul>
                                 <li><NavLink className="nav-link scrollto active" to="/">Home</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/dashboard">Dashboard</NavLink></li>
@@ -34,7 +33,8 @@ function Navbar() {
                                 <li><NavLink className="nav-link scrollto" to="/face">Face</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/about">About</NavLink></li>
                             </ul>
-                            <i className="bi bi-list mobile-nav-toggle"></i>
+                            <i onClick={() => setShowMediaIcons(!showMediaIcons)} 
+                            className="bi bi-list mobile-nav-toggle"></i>
                         </nav>
                         <div className="toggle" onClick={handleClick}>
                             <Moon style={{

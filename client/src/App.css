@@ -1,6 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a {
@@ -156,8 +156,8 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #364146;
-  font-size: 28px;
+  color: #fff;
+  font-size: 30px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -168,6 +168,15 @@ h6 {
   color: #fff;
 }
 
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
 
 .navbar-mobile {
   position: fixed;
@@ -195,7 +204,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #1eb4ff;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -204,13 +213,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #364146;
+  color: white;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #009cea;
+  color: black;
 }
 
 .navbar-mobile .getstarted,
@@ -265,6 +274,11 @@ h6 {
 }
 .hero-img{
   height: 450px;
+}
+@media (max-width: 991px) {
+  .hero-img{
+    height: 250px;
+  }
 }
 /* #hero .hero-img {
   text-align: center;

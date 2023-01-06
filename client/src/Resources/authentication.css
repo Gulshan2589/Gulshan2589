@@ -35,3 +35,12 @@ label{
     color: white;
     font-weight: 600;
 }
+@media (max-width: 991px) {
+    .register{
+        background-image:linear-gradient(300deg, #89f7fe 0%, #66a6ff 100%);
+    }
+    .lottie{
+      display: none;
+    }
+  }
+  
