@@ -25,12 +25,7 @@ function Navbar() {
                             {/* <h1><NavLink to="/">Hisab Book</NavLink></h1> */}
                             <NavLink to="/"><img src="assets/img/log1.png" alt="" className="img-fluid" /></NavLink>
                         </div>
-<<<<<<< HEAD
-                        <nav id="navbar" className={showMediaIcons ?"navbar navbar-mobile":"navbar order-last ms-auto order-lg-0"}>
-=======
-    
-                        <nav id="navbar" className="navbar navbar-expand-lg order-last ms-auto order-lg-0">
->>>>>>> 77f13f1ab2eb6e5a7fd9c8969bf189c37615bac6
+                        <nav id="navbar" className={showMediaIcons ? "navbar navbar-mobile" : "navbar order-last ms-auto order-lg-0"}>
                             <ul>
                                 <li><NavLink className="nav-link scrollto active" to="/">Home</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/dashboard">Dashboard</NavLink></li>
@@ -38,15 +33,8 @@ function Navbar() {
                                 <li><NavLink className="nav-link scrollto" to="/face">Face</NavLink></li>
                                 <li><NavLink className="nav-link scrollto" to="/about">About</NavLink></li>
                             </ul>
-<<<<<<< HEAD
-                            <i onClick={() => setShowMediaIcons(!showMediaIcons)} 
-                            className="bi bi-list mobile-nav-toggle"></i>
-=======
-                            //<i className="bi bi-list mobile-nav-toggle"></i>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                             <span class="navbar-toggler-icon"></span>
-                            </button>
->>>>>>> 77f13f1ab2eb6e5a7fd9c8969bf189c37615bac6
+                            <i onClick={() => setShowMediaIcons(!showMediaIcons)}
+                                className="bi bi-list mobile-nav-toggle"></i>
                         </nav>
                         <div className="toggle" onClick={handleClick}>
                             <Moon style={{
